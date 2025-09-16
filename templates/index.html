@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Fibonacci Calculator</h1>
+    {% if num %}
+    <p>Fibonacci number: {{ num }}</p>
+    <p>Time taken: {{ time }} ns</p>
+    {% endif %}
+    <form action="/" method="post">
+        <input type="number" name="n" value="{{ n }}" min="1" max="100">
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
