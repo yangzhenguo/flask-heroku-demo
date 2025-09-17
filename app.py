@@ -19,6 +19,10 @@ def index_post() -> str:
     end = time.perf_counter_ns()
     return render_template('index.html', num=num, time=end - start, n=n)
 
+@app.get('/center')
+def center() -> str:
+    return render_template('center.html')
+
 @lru_cache(maxsize=100)
 def fib(n: int) -> int:
     if n < 2:
